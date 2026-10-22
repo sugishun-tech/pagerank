@@ -1,0 +1,154 @@
+{
+  "recorded_at_utc": "2026-10-22T19:04:38.274387+00:00",
+  "requested_threads": 4,
+  "environment": {
+    "OMP_PROC_BIND": "close",
+    "OMP_PLACES": "cores",
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "before_package_import_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "semantics": "sched_getaffinity(0) is the calling-thread mask, not a union of OpenMP worker masks. This diagnostic runs one tiny solve but measures no speed.",
+  "after_package_import_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "build_info": {
+    "available": true,
+    "openmp": true,
+    "native": true,
+    "compiler": "13.3.0",
+    "fast_math": false,
+    "kernel": "fused-pull-csr-balanced"
+  },
+  "after_build_info_affinity": [
+    0
+  ],
+  "openmp_places": {
+    "available": true,
+    "runtime_library": "libgomp.so.1",
+    "num_places": 9,
+    "proc_bind_enum": 3,
+    "places": [
+      {
+        "place": 0,
+        "processors": [
+          0
+        ]
+      },
+      {
+        "place": 1,
+        "processors": [
+          1
+        ]
+      },
+      {
+        "place": 2,
+        "processors": [
+          2
+        ]
+      },
+      {
+        "place": 3,
+        "processors": [
+          3
+        ]
+      },
+      {
+        "place": 4,
+        "processors": [
+          4
+        ]
+      },
+      {
+        "place": 5,
+        "processors": [
+          5
+        ]
+      },
+      {
+        "place": 6,
+        "processors": [
+          6
+        ]
+      },
+      {
+        "place": 7,
+        "processors": [
+          7
+        ]
+      },
+      {
+        "place": 8,
+        "processors": [
+          8
+        ]
+      }
+    ],
+    "note": "OpenMP place processor IDs are reported by the runtime; outside a parallel region."
+  },
+  "tiny_solve": {
+    "n": 4,
+    "m": 4,
+    "iterations": 1,
+    "residual_l1": 0.0,
+    "converged": true
+  },
+  "after_parallel_solve_affinity": [
+    0
+  ],
+  "thread_statuses_after_solve": {
+    "available": true,
+    "threads": [
+      {
+        "Name": "python",
+        "Tgid": "3565",
+        "Pid": "3565",
+        "Cpus_allowed_list": "0",
+        "Mems_allowed_list": "0",
+        "task_directory_id": "3565"
+      },
+      {
+        "Name": "python",
+        "Tgid": "3565",
+        "Pid": "3572",
+        "Cpus_allowed_list": "1",
+        "Mems_allowed_list": "0",
+        "task_directory_id": "3572"
+      },
+      {
+        "Name": "python",
+        "Tgid": "3565",
+        "Pid": "3573",
+        "Cpus_allowed_list": "2",
+        "Mems_allowed_list": "0",
+        "task_directory_id": "3573"
+      },
+      {
+        "Name": "python",
+        "Tgid": "3565",
+        "Pid": "3574",
+        "Cpus_allowed_list": "3",
+        "Mems_allowed_list": "0",
+        "task_directory_id": "3574"
+      }
+    ]
+  }
+}

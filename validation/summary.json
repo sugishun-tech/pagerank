@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "validation_date_jst": "2026-10-23",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "native_build_info": {
+    "available": true,
+    "openmp": true,
+    "native": true,
+    "compiler": "13.3.0",
+    "fast_math": false,
+    "kernel": "fused-pull-csr-balanced"
+  },
+  "portable_build_info": {
+    "available": true,
+    "openmp": false,
+    "native": false,
+    "compiler": "13.3.0",
+    "fast_math": false,
+    "kernel": "fused-pull-csr-balanced"
+  },
+  "portable_build_procedure": "Clean source -> sdist -> wheel -> separate target installation; imported path and build_info checked before pytest.",
+  "unit_tests": [
+    {
+      "build": "native",
+      "tests": 140,
+      "passed": 140,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 2.755,
+      "timestamp": "2026-10-23T04:12:34.041707+09:00",
+      "junit_file": "validation/native-pytest.xml",
+      "junit_sha256": "60b8db3ea0a3dfb75809275025dcf335f3d7da395de4e626b887e11ff7e85dd1"
+    },
+    {
+      "build": "portable",
+      "tests": 140,
+      "passed": 139,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "seconds": 2.77,
+      "timestamp": "2026-10-23T04:15:43.201740+09:00",
+      "junit_file": "validation/portable-pytest.xml",
+      "junit_sha256": "38c618874a155b45313b4394afbfea118447b0476825f15b236557a14af30fc5"
+    }
+  ],
+  "benchmarks": {
+    "ablation": {
+      "conditions": 3,
+      "successful_method_conditions": 12,
+      "timed_samples": 84,
+      "all_saved_samples": 84,
+      "all_valid": true,
+      "max_error_bound_l1": 9.268454716529359e-11,
+      "sha256": "81b37abd261130f8f2bd049937c0b067a6e330c0741637b348d3a545e0e0ae21",
+      "source": "benchmark_results/ablation/results.json"
+    },
+    "high_alpha": {
+      "conditions": 2,
+      "successful_method_conditions": 13,
+      "timed_samples": 91,
+      "all_saved_samples": 91,
+      "all_valid": true,
+      "max_error_bound_l1": 9.744449984330069e-11,
+      "sha256": "576a575016f6b589064be47c695c564b805bef08937c5c05d7ec7ac1aa346ec1",
+      "source": "benchmark_results/high_alpha/results.json"
+    },
+    "main": {
+      "conditions": 12,
+      "successful_method_conditions": 76,
+      "timed_samples": 532,
+      "all_saved_samples": 532,
+      "all_valid": true,
+      "max_error_bound_l1": 9.778260268907915e-11,
+      "sha256": "5228844b9d5461e770af1a23d99b43f84ff95baa74badb1ead435be135783e8f",
+      "source": "benchmark_results/main/results.json"
+    },
+    "million": {
+      "conditions": 1,
+      "successful_method_conditions": 5,
+      "timed_samples": 35,
+      "all_saved_samples": 35,
+      "all_valid": true,
+      "max_error_bound_l1": 7.661138352011578e-12,
+      "sha256": "327cbb73afd7c7243762f0fc2290f74718663c6d3ac2fcf18ec3b7a03396dfd8",
+      "source": "benchmark_results/million/results.json"
+    },
+    "stanford": {
+      "conditions": 1,
+      "successful_method_conditions": 6,
+      "timed_samples": 42,
+      "all_saved_samples": 42,
+      "all_valid": true,
+      "max_error_bound_l1": 9.133395879190015e-11,
+      "sha256": "d3d39509e3208fcc0221760ac34082e2e765d5053b08e3baeb70ed851343264e",
+      "source": "benchmark_results/stanford/results.json"
+    },
+    "weighted_personalized": {
+      "conditions": 1,
+      "successful_method_conditions": 4,
+      "timed_samples": 28,
+      "all_saved_samples": 28,
+      "all_valid": true,
+      "max_error_bound_l1": 1.8870257868222256e-11,
+      "sha256": "cd00a53268dc7a8bffa0c33813a52fff321f4ca125189d497999b607d470f7e9",
+      "source": "benchmark_results/weighted_personalized/results.json"
+    }
+  },
+  "total_timed_samples": 812,
+  "all_benchmark_samples_valid": true,
+  "source_sha256": {
+    "benchmarks/__init__.py": "dd1a677c4c436d6a83b8f9624a6296e0f98f4c3e105c602635f0a35f7a664732",
+    "benchmarks/ablation.py": "e8d12578b7a37f1cf8d0ca69ef44136e344feb5a0e4b211369f79accbdca5468",
+    "benchmarks/figures.py": "7e179b4267e4f4fb6ce7f0ae442bef2e319e5c02b363fae857eac258c1b33683",
+    "benchmarks/plot.py": "f56e2e58257aec22de5b1ff3d16f10a629362a5fe02220fa38122f997a7a89e4",
+    "benchmarks/run.py": "4038db199ddc38744bd64c2424fdbddd70abb6d6da42c18ef7cf1f6da405c16b",
+    "benchmarks/stanford.py": "f9a6a5ea7edb2562612c53b1c96ead0ef3f7eefb2ca238b96d9dcf146971de2a",
+    "benchmarks/thread_affinity.py": "58099acf41b2145b1da07f8091bc3dc137ad17ccce270a2258df149a451680ca",
+    "examples/basic.py": "485614dd15741c18aa6b42a4d71e9738ce7ba83bfb5bca6d368f8ccec0a1b565",
+    "examples/research.py": "f9a372e1d3aa0be9cbeac40c4a431f5bf540d02dd27207504377f58b19ac5bbd",
+    "pyproject.toml": "53d483bed54513685f4e8808f42ef4ac2f2a0c0faf56ff6d78ed02f221bc2e89",
+    "setup.py": "81aef5d9478d562ac608bcc8dd818f48a308c8522f241effe34c0fa966344424",
+    "src/pagerank_lab/__init__.py": "75374dacf4d32f700804ad8fca76b58ceb84674ceeb699c1234a948f075d04cb",
+    "src/pagerank_lab/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "src/pagerank_lab/_kernels.pyx": "2a4435a3859943132de05bc133b6bcaf9fbeb8c5bc473099f4f2fb4dae818a7f",
+    "src/pagerank_lab/analysis.py": "e914822a53e7af07ea09f86e31e36990f5e621a2a730d1fdee465f23441bf0f4",
+    "src/pagerank_lab/cli.py": "e40c6b81fdb59e008b18d7a30dd133952b6d0df6d517864fe8cf936b9b2cc1d2",
+    "src/pagerank_lab/core.py": "a48edfd1fff62c7910d054132c9fd064252fee3e44209a9f35f9906c31b699bf",
+    "src/pagerank_lab/generators.py": "42a59acbca88a230f33cb3e9f739a0df31b0f88470be412f3d305916bc7eda17",
+    "src/pagerank_lab/graph.py": "cfae3a74b85989fabdec5e65edcee4713e30700acde86607c8e4f86b3bcd7367",
+    "src/pagerank_lab/io.py": "62c6731a6624e9c35cc94490fe182cf274600ac1d340aae6512905ac55ba6476",
+    "tests/test_analysis.py": "a514d8720781895331aacc9c1d81ebc30d03c6f0371dc8d503bfbb6536baf811",
+    "tests/test_benchmark.py": "dd57d5b1fe99d9ab322062e7f5fff4e20b53bafbf6213e7e5763e383076c2fd8",
+    "tests/test_core.py": "500784cded2de4b327f5fd5fe525c148ce3a01b4217995aedf225cb0fe61b15c",
+    "tests/test_graph_validation.py": "221eb467e194b733bfad49138db965a280ceef9caa6b7ad8b9903eaa77e4e1de",
+    "tests/test_io_cli.py": "14458735abbf1ab98dbef3af7d321b824f85129202de89815324b07fddead969",
+    "tests/test_stanford.py": "78abb972391b517332ca7596593cd889295a468fd237b2f63dfa5c60a886fdde"
+  },
+  "limitations": [
+    "Only Linux x86-64 / Python 3.12 was executed; other CI configurations are unverified.",
+    "Residual bounds are evaluated in float64, not outward-rounded interval arithmetic.",
+    "Performance depends on the graph, hardware, precision and environment."
+  ]
+}

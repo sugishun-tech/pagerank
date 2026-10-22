@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.dll
+*.dylib
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+src/pagerank_lab/_kernels.c
+src/pagerank_lab/_kernels.html
+

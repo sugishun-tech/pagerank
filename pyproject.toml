@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77", "wheel", "Cython>=3.0", "numpy>=1.23"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pagerank-lab"
+version = "0.1.0"
+description = "Cython PageRank kernels and reproducible numerical experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "PageRank Lab contributors"}]
+dependencies = ["numpy>=1.23", "scipy>=1.12"]
+keywords = ["pagerank", "cython", "numerical-linear-algebra", "graph", "benchmark"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Cython",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "networkx>=3", "sympy>=1.11"]
+analysis = ["sympy>=1.11"]
+benchmark = ["networkx>=3", "matplotlib>=3.6", "threadpoolctl>=3"]
+igraph = ["igraph>=0.11"]
+all = ["pytest>=7", "networkx>=3", "sympy>=1.11", "matplotlib>=3.6", "threadpoolctl>=3"]
+
+[project.scripts]
+pagerank-lab = "pagerank_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pagerank_lab = ["*.pyx"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+

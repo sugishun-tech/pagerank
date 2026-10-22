@@ -1,0 +1,14 @@
+# Direct dependencies used for the recorded Linux / CPython 3.12 benchmark.
+# Not a cross-platform lockfile; transitive dependencies are resolved by pip.
+numpy==2.3.5
+scipy==1.17.0
+Cython==3.3.0
+networkx==3.7
+igraph==1.0.0
+sympy==1.14.0
+matplotlib==3.10.8
+pytest==9.1.1
+setuptools==84.0.0
+wheel==0.48.0
+build==1.6.1
+threadpoolctl==3.6.0
